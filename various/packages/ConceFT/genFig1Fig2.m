@@ -1,6 +1,8 @@
 clear ; close all ;
+% Modified by Yangkang Chen on 03/31/2017
 
-addpath('/Users/hautiengwu/Dropbox/ConCeft/SubmissionCode/Conceft') ;
+%addpath('/Users/hautiengwu/Dropbox/ConCeft/SubmissionCode/Conceft') ;
+addpath(genpath('./'));
 scrsz = get(groot,'ScreenSize');
 
 	%% generate the simulated data
