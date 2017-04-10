@@ -1,0 +1,354 @@
+sfcp:	fomels@vostok	Wed Aug 27 16:45:34 2003
+
+	dscale=0.25
+	#min3=0
+	#max1=3000
+	#j1=1
+	d2=4.
+	o1=0
+	n2=2301
+	sweepfreqstart=0
+	="marmvel.H@"
+	Q2="/home/math/m3/fomel/data/oldq2"
+	label1="meters"
+	d3=1
+	#min4=0
+	#max2=9204.24
+	#j2=1
+	n3=1
+	o2=.0
+	lengthunits=0
+	label2="meters"
+	d4=1
+	o3=0
+	#max3=0
+	#j3=1
+	n4=1
+	impulsepolaritycode=0
+	amplrecoverycode=0
+	correlatedcode=0
+	tracesortcode=1
+	nsampertrnow=2301
+	data_format="xdr_float"
+	label3=""
+	o4=0
+	#max4=0
+	#j4=1
+	sratenow=2304
+	auxtrperrec=0
+	reelnumber=1
+	linenumber=1
+	bhed="marmvel.bhed"
+	label4=""
+	float=1
+	esize=4
+	sampleformatcode=1
+	sweeptracenum=0
+	nsampertrbefore=2301
+	in="marmvel.H@"
+	title="Marmousi velocity (m/sec)"
+	#f1=0
+	sweeptaperlen1=0
+	cdpfold=1502
+	nt=2301
+	dt=2.304000e-03
+	axis=0
+	#f2=1
+	binarygaincode=0
+	sweeptaperlen2=0
+	sweeptypecode=0
+	jobidentnum=1
+	header="marmvel.header"
+	#f3=0
+	#min1=0
+	vibratorpolaritycode=0
+	sweeptapertype=0
+	sweeplength=0
+	sratebefore=2304
+	#f4=0
+	#min2=4.236
+	sweepfreqend=0
+	vertsumcode=0
+	n1=751
+	d1=4.
+	datatrperrec=751
+	data_format="xdr_float"
+	esize=4
+	in="stdout"
+	in="stdin"
+
+1.8-svn	sfdd	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	data_format="native_float"
+	esize=4
+	in="stdout"
+	in="stdin"
+
+1.8-svn	sfscale	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	data_format="native_float"
+	esize=4
+	in="stdout"
+	in="stdin"
+
+1.8-svn	sfput	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	unit2=km
+	label1=Depth
+	d2=0.004
+	unit=km/s
+	label2=Distance
+	data_format="native_float"
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/marmvel0.rsf@"
+	label=Velocity
+	unit1=km
+	d1=0.004
+1.8-svn	sfwindow	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	d2=0.016
+	n2=576
+	o1=0
+	o2=0
+	label1="Depth"
+	data_format="native_float"
+	label2="Distance"
+	esize=4
+	j1=2
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/marmvel-t.rsf@"
+	j2=4
+	unit1="km"
+	unit2="km"
+	d1=0.008
+	n1=376
+1.8-svn	sfwindow	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	d2=0.008
+	n2=1
+	o1=0
+	o2=0
+	label1="Distance"
+	data_format="native_float"
+	label2="Depth"
+	esize=4
+	in="stdout"
+	unit1="km"
+	unit2="km"
+	d1=0.016
+	n1=576
+	in="stdin"
+
+1.8-svn	sfspray	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	d2=0.016
+	n2=576
+	d3=0.008
+	n3=1
+	o2=0
+	data_format="native_float"
+	d4=1
+	n4=1
+	o3=0
+	label2="Distance"
+	d5=1
+	n5=1
+	o4=0
+	label3="Depth"
+	n6=1
+	o5=0
+	label4=""
+	esize=4
+	label5=""
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/marmvel-tt.rsf@"
+	unit2="km"
+	unit3="km"
+	n1=20
+1.8-svn	sfcat	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	data_format="native_float"
+	esize=4
+	in="stdout"
+	n1=396
+	in="stdin"
+
+1.8-svn	sfput	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	data_format="native_float"
+	o1=0
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/marmvel-true.rsf@"
+	d1=0.008
+1.8-svn	sfdepth2time	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	o1=0
+	data_format="native_float"
+	esize=4
+	in="stdout"
+	d1=0.001
+	n1=4301
+	in="stdin"
+
+1.8-svn	sfai2refl	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	data_format="native_float"
+	esize=4
+	in="stdout"
+	in="stdin"
+
+1.8-svn	sfricker1	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	data_format="native_float"
+	esize=4
+	in="stdout"
+	in="stdin"
+
+1.8-svn	sftime2depth	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 00:58:31 2017
+
+	o1=0
+	data_format="native_float"
+	esize=4
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/refl.rsf@"
+	d1=0.008
+	n1=396
+1.8-svn	sfblsrtm_bd	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 01:09:22 2017
+
+	d2=0.016
+	n2=576
+	o1=0
+	label1="Time"
+	d3=0.115
+	n3=8
+	o2=0
+	data_format="native_float"
+	label2="Distance"
+	o3=0
+	label3="Shot"
+	esize=4
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/data.rsf@"
+	unit1="s"
+	unit2="m"
+	unit3="m"
+	d1=0.001
+	n1=4301
+1.8-svn	sfblsrtm_bd	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 02:17:27 2017
+
+	d2=0.016
+	n2=576
+	o1=0
+	label1="Depth"
+	n3=1
+	o2=0
+	data_format="native_float"
+	label2="Distance"
+	esize=4
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/m-imag-invs-mfvw-1.rsf@"
+	unit1="m"
+	unit2="m"
+	d1=0.008
+	n1=396
+1.8-svn	sfpwspray	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 02:18:01 2017
+
+	unit4="m"
+	d2=1
+	n2=15
+	d3=0.016
+	n3=576
+	o2=-7
+	data_format="native_float"
+	d4=0.115
+	n4=1
+	o3=0
+	d5=1
+	n5=1
+	o4=0
+	label3="Distance"
+	d6=1
+	n6=1
+	o5=0
+	label4="Shot"
+	esize=4
+	n7=1
+	o6=0
+	label5=""
+	in="stdout"
+	n8=1
+	label6=""
+	unit3="m"
+	in="stdin"
+
+1.8-svn	sfput	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 02:18:01 2017
+
+	d2=0
+	data_format="native_float"
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/spray-mfvw-1.rsf@"
+	o2=1
+1.8-svn	sftransp	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 02:18:01 2017
+
+	o1=1
+	d2=0.008
+	n2=396
+	label1="Distance"
+	o2=0
+	data_format="native_float"
+	label2="Depth"
+	esize=4
+	in="stdout"
+	unit1="m"
+	unit2="m"
+	d1=0
+	n1=15
+	in="stdin"
+
+1.8-svn	sfmean	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 02:18:01 2017
+
+	data_format="native_float"
+	esize=4
+	in="stdout"
+	in="stdin"
+
+1.8-svn	sftransp	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 02:18:01 2017
+
+	o1=0
+	d2=0
+	n2=15
+	label1="Depth"
+	o2=1
+	data_format="native_float"
+	label2="Distance"
+	esize=4
+	in="stdout"
+	unit1="m"
+	unit2="m"
+	d1=0.008
+	n1=396
+	in="stdin"
+
+1.8-svn	sfwindow	baimin/lsrtm_lr/syn_marm_sim_mis_huge:	yc5@mac104996	Thu Apr  6 02:18:01 2017
+
+	d2=0.016
+	o1=0
+	n2=576
+	d3=0
+	n3=1
+	o2=0
+	label1="Depth"
+	data_format="native_float"
+	o3=1
+	label2="Distance"
+	f2=7
+	label3="Distance"
+	esize=4
+	in="/Users/yc5/data/datapath/baimin/lsrtm_lr/syn_marm_sim_mis_huge/m-init-invs-mfvw-1.rsf@"
+	unit1="m"
+	unit2="m"
+	unit3="m"
+	d1=0.008
+	n1=396
+1.8-svn	sflaplac	baimin/lsrtm_lr/pwd:	yc5@mac104996	Sat Apr  8 19:55:32 2017
+
+	data_format="native_float"
+	esize=4
+	in="/Users/yc5/data/datapath/test2.rsf@"
+1.8-svn	sfadd	baimin/lsrtm_lr/pwd:	yc5@mac104996	Sat Apr  8 19:56:33 2017
+
+	data_format="native_float"
+	esize=4
+	in="/Users/yc5/data/datapath/sfaddWgqunb"
