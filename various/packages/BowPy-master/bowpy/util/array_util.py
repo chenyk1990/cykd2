@@ -1675,7 +1675,7 @@ def truncate(data, tmin, tmax, absolute=False):
 
 def vespagram(stream, slomin=-5, slomax=5, slostep=0.1, inv=None, event=None,
               power=4, plot=False, cmap='seismic',
-              markphases=None, method='fft',
+              markphases=None, method='normal',
               tw=None, zoom=1, savefig=False, dpi=400, fs=25):
     """
     Creates a vespagram for the given slownessrange and slownessstepsize. Returns the vespagram as numpy array
@@ -1735,6 +1735,11 @@ def vespagram(stream, slomin=-5, slomax=5, slostep=0.1, inv=None, event=None,
     st = stream.copy()
     data = stream2array(st, normalize=True)
 
+    print "HHHHHHHHHHHH"
+    print data.shape
+    print type(data)
+
+    """
     if isinstance(inv, Inventory):
         attach_network_to_traces(st, inv)
         attach_coordinates_to_traces(st, inv, event)
@@ -1749,7 +1754,10 @@ def vespagram(stream, slomin=-5, slomax=5, slostep=0.1, inv=None, event=None,
                 sref = i
     else:
         sref = 0
-
+    """
+    sref=0
+    #print sref
+    
     epidist = np.zeros(data.shape[0])
     for i, trace in enumerate(st):
         epidist[i] = trace.stats.distance
@@ -1764,10 +1772,14 @@ def vespagram(stream, slomin=-5, slomax=5, slostep=0.1, inv=None, event=None,
     urange = np.linspace(slomin, slomax, uN)
     it = data.shape[1]
     iF = int(math.pow(2, nextpow2(it)))
+    print "it=",it,"iF=",iF
+    
+    #dft0 = np.fft.fft(data, iF, axis=0)#reference
     dft = np.fft.fft(data, iF, axis=1)
     vespa = np.zeros((uN, data.shape[1]))
     taxis = np.arange(data.shape[1]) * dsample
 
+    """
     if method in ("fft"):
         # Calculate timeshift-table as a tensor, see shift2ref method "fft" as guide.
         timeshift_table = np.zeros((data.shape[0], urange.size, dft.shape[1])).astype('complex')
@@ -1802,6 +1814,7 @@ def vespagram(stream, slomin=-5, slomax=5, slostep=0.1, inv=None, event=None,
             vespatrace = np.delete(vespatrace, np.s_[it:], 1)
 
             vespa[i] = stack(vespatrace, power)
+    """
 
     if method in ("normal"):
         shift_data_tmp = np.zeros(data.shape)
