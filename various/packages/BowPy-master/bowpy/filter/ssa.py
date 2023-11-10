@@ -13,11 +13,11 @@ def ssa_denoise_recon(st, p, flow, fhigh):
 	SSA method, that de-noises the data given in stream by a rank reduction of the singular values of the
 	Hankel matrix, created from the data in st and the sampling interval of the traces, to p.
 
- 	:param st:     Stream of data
+	:param st:     Stream of data
 	:type  st:
 
 	:param dt:     sampling interval
-	:type  dt: 	   float
+	:type  dt:	   float
 
 	:param p:      number of singular values used to reconstuct the data
 	:type  p:	   int
@@ -123,14 +123,14 @@ def ssa(d,nw,p,ssa_flag):
 	l = np.arange(0,nw,1)
 	R = np.zeros((nt,p))
 
- 	# Make Hankel Matrix.
+	# Make Hankel Matrix.
 	M = np.zeros((N-1,N)).astype('complex')
 	Mp = np.zeros((N-1,N)).astype('complex')
 
 	for k in range(N):
 		M[:,k] = d[k+l]
 
- 	# Eigenimage decomposition
+	# Eigenimage decomposition
 
 	U,S,V = sp.linalg.svd(M)
 	
@@ -138,15 +138,15 @@ def ssa(d,nw,p,ssa_flag):
 
 	# Reconstruct with one oscillatory component at the time.
 	if not ssa_flag == 0:
-	 	for k in range(p):
+		for k in range(p):
 			u = np.zeros((N-1,2)).astype('complex')
-	 		u[:,0] = U[:,k]
-	 		Mp = dot( dot(u, u.conj().transpose()), M )
-	 		R[:,k] = average_anti_diag(Mp)
-	 	dp = sum(d)
+			u[:,0] = U[:,k]
+			Mp = dot( dot(u, u.conj().transpose()), M )
+			R[:,k] = average_anti_diag(Mp)
+		dp = sum(d)
 
 	else:
-	 	
+		
 		for k in range(p):
 			u = np.zeros((N-1,2)).astype('complex')
 			u[:,0] = U[:,k]
@@ -283,15 +283,15 @@ def average_anti_diag(A):
 	 s(i,1) = s(i,1)/(b-a+1);
 
 	 end;
- 	"""
+	"""
 
- 	m,n = A.shape
+	m,n = A.shape
 
- 	N = m+n-1
+	N = m+n-1
 
- 	s = np.zeros(N).astype('complex')
+	s = np.zeros(N).astype('complex')
 
- 	for i in range(N):
+	for i in range(N):
 		a = max(1,(i+1)-m+1)
 		b = min(n,(i+1))
 		
@@ -299,11 +299,11 @@ def average_anti_diag(A):
 			k = a
 			s[i] = s[i] + A[i-k+1,k-1]
 		else:
-	 		for k in range(a,b+1):
-	 			s[i] = s[i] + A[i-k+1,k-1]
+			for k in range(a,b+1):
+				s[i] = s[i] + A[i-k+1,k-1]
 
 		s[i]= s[i]/(b-a+1)
- 		
+		
 	return(s)
 
 

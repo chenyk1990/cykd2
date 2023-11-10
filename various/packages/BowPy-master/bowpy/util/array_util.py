@@ -1735,9 +1735,9 @@ def vespagram(stream, slomin=-5, slomax=5, slostep=0.1, inv=None, event=None,
     st = stream.copy()
     data = stream2array(st, normalize=True)
 
-    print "HHHHHHHHHHHH"
-    print data.shape
-    print type(data)
+    print("HHHHHHHHHHHH")
+    print(data.shape)
+    print(type(data))
 
     """
     if isinstance(inv, Inventory):
@@ -1772,7 +1772,7 @@ def vespagram(stream, slomin=-5, slomax=5, slostep=0.1, inv=None, event=None,
     urange = np.linspace(slomin, slomax, uN)
     it = data.shape[1]
     iF = int(math.pow(2, nextpow2(it)))
-    print "it=",it,"iF=",iF
+    print("it=",it,"iF=",iF)
     
     #dft0 = np.fft.fft(data, iF, axis=0)#reference
     dft = np.fft.fft(data, iF, axis=1)
